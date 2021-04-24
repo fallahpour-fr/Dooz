@@ -1,0 +1,225 @@
+<html>
+
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta charset="UTF-8">
+    <title>Dooz</title>
+    <script src="https://kit.fontawesome.com/3657f037a5.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        body {
+            background-color: rgb(21, 17, 75);
+        }
+
+        .overlay {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1em;
+        }
+
+        .feacture {
+            background-color: cornsilk;
+            display: flex;
+            width: 40%;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
+            font-size: 1em;
+        }
+
+        /*........................................................*/
+        .btn-feactuer {
+            outline: none;
+            border: none;
+            padding: 1em;
+        }
+
+        .ranking__item {
+            display: none;
+            position: absolute;
+            width: 10%;
+            right: 380;
+            top: 60;
+            /* display: flex;
+            flex-direction: column; */
+        }
+
+        .ranking__link {
+            padding: 0.5em;
+            text-decoration: none;
+            background-color: rgb(223, 223, 223);
+            border: 1px solid gray;
+            display: block;
+        }
+
+        .ranking__content:hover .ranking__item {
+            display: block;
+        }
+
+        /*..................................................................*/
+
+        .player-part {
+            background-color: cornsilk;
+            margin: 30px;
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            padding: 0.5em;
+        }
+
+        .player {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px;
+            width: 40%;
+            padding: 1em;
+            border-radius: 0.5em;
+            border: 1px solid gray;
+        }
+
+        /*..................................................................*/
+
+        .parent {
+            background-color: rgb(243, 236, 209);
+            width: 40%;
+
+            padding: 1.2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .btn {
+            padding: 1em;
+            margin: 15px;
+            border-radius: 1.5em;
+            outline: none;
+        }
+
+        .player--active {
+            background-color: rgb(218, 215, 206);
+        }
+
+        
+
+        /*.............................................................................................*/
+
+        /* .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        } */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <div class="feacture">
+            <div>
+                <button class="btn-feactuer Reset-btn">
+                    Reset
+                </button>
+            </div>
+
+            <div class="ranking">
+                <div class="ranking__content">
+                    <button class="btn-feactuer ranking__btn">start</button>
+                    <div class="ranking__item">
+                        <a class="ranking__link">Eseay</a>
+                        <a class="ranking__link">Medium</a>
+                        <a class="ranking__link">imposible</a>
+                        <a class="ranking__link">Play againist a friend</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="dropdown">
+                <button class="dropbtn">Dropdown</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div> -->
+        </div>
+
+        <div class="player-part">
+            <span class="player player__one player--active " id="current--0">
+                <span id="multiplied"><i class="fas fa-times"></i></span>
+                <span class="player__one__score score">0</span>
+            </span>
+            <span class="player player__two" id="current--1">
+                <span id="circle"><i class="far fa-circle"></i></span>
+                <span class="player__one__score score">0</span>
+            </span>
+        </div>
+        <div class="parent">
+            <div class="line line--one">
+                <button class="btn line--one__btn" id="0"></button>
+                <button class="btn line--one__btn" id="1"></button>
+                <button class="btn line--one__btn" id="2"></button>
+            </div>
+            <div class="line line--two">
+                <button class="btn line--two__btn" id="3"></button>
+                <button class="btn line--two__btn" id="4"></button>
+                <button class="btn line--two__btn" id="5"></button>
+            </div>
+            <div class="line line--three">
+                <button class="btn line--three__btn" id="6"></button>
+                <button class="btn line--three__btn" id="7"></button>
+                <button class="btn line--three__btn" id="8"></button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="../project/s.js"></script>
+
+</html>
