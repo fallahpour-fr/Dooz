@@ -6,7 +6,7 @@
     <title>Dooz</title>
     <script src="https://kit.fontawesome.com/3657f037a5.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
-    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
     <style>
         * {
             margin: 0;
@@ -17,6 +17,7 @@
 
         body {
             background-color: rgb(21, 17, 75);
+            font-size: 1em;
         }
 
         .overlay {
@@ -34,10 +35,11 @@
             justify-content: space-between;
             align-items: center;
             padding: 1em;
-            font-size: 1em;
+            font-size: 20px;
         }
 
         /*........................................................*/
+
         .btn-feactuer {
             outline: none;
             border: none;
@@ -92,7 +94,6 @@
         .parent {
             background-color: rgb(243, 236, 209);
             width: 40%;
-
             padding: 1.2em;
             display: flex;
             justify-content: center;
@@ -101,63 +102,58 @@
         }
 
         .btn {
-            padding: 1em;
-            margin: 15px;
+            width: 2em;
+            height: 2em;
+            margin: 10px;
             border-radius: 1.5em;
             outline: none;
+            font-size: 1em;
+            vertical-align: top;
         }
 
         .player--active {
             background-color: rgb(218, 215, 206);
         }
 
-        
-
-        /*.............................................................................................*/
-
-        /* .dropbtn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 16px;
-            font-size: 16px;
-            border: none;
-        }
-
-        .dropdown {
+        /* .container {
             position: relative;
-            display: inline-block;
+        } 
+
+        .btn_Multiplication::before {
+            content: "";
+            /* position: absolute; */
+        /* left: 23px;
+            top:-1px; 
+            width: 5px;
+            height: 29px;
+            border: solid blue;
+            border-width: 0 3px 0 0;
+            transform: rotate(45deg);
         }
 
-        .dropdown-content {
-            display: none;
+        .btn_Multiplication::after {
+            content: "";
+            /* position: absolute; */
+        /* left: 24px;
+            top:1.5px; 
+            width: 5px;
+            height: 30px;
+            border: solid blue;
+            border-width: 0 3px 0 0;
+            transform: rotate(-45deg);
+        }   
+
+        .btn_circle::before {
+            content: "";
             position: absolute;
-            background-color: #f1f1f1;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #ddd;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown:hover .dropbtn {
-            background-color: #3e8e41;
-        } */
-        .hidden {
-            display: none;
-        }
+            left: 19.3px;
+            top:3.5px;
+            width: 15px;
+            height: 15px;
+            border: 3px solid blue;
+            border-radius: 50%;
+        }*/
+        /*.............................................................................................*/
     </style>
 </head>
 
@@ -186,17 +182,17 @@
 
         <div class="player-part">
             <span class="player player__one player--active " id="current--0">
-                <span id="multiplied"><i class="fas fa-times"></i></span>
-                <span class="player__one__score score">0</span>
+                <span><i class="fas fa-times"></i></span>
+                <span class="player__one__score score" id="multiplied">0</span>
             </span>
             <span class="player player__two" id="current--1">
-                <span id="circle"><i class="far fa-circle"></i></span>
-                <span class="player__one__score score">0</span>
+                <span><i class="far fa-circle"></i></span>
+                <span class="player__one__score score" id="circle">0</span>
             </span>
         </div>
         <div class="parent">
             <div class="line line--one">
-                <button class="btn line--one__btn" id="0"></button>
+                <span class="container"><button class="btn line--one__btn  btn_Multiplication" id="0"></button></span>
                 <button class="btn line--one__btn" id="1"></button>
                 <button class="btn line--one__btn" id="2"></button>
             </div>
