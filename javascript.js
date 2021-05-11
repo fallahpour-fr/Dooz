@@ -12,6 +12,8 @@ let activePlayer = 0;
 let multiplied = document.querySelector('#multiplied');
 let circle = document.querySelector('#circle');
 let resetBtn = document.querySelector('.Reset-btn');
+let gamesizeBtn = document.querySelector('.Gamesize-btn');
+let line=document.querySelector('.line');
 
 function switchPlayer() {
     player0EL.classList.toggle('player--active');
@@ -87,11 +89,11 @@ function checkWinner(currentPlayer) {
         multiplied.textContent = arrCheckWinner[0];
         k=0;
     } else {
-        console.log('best');
         j++;
         arrCheckWinner[1] += j;
         circle.textContent = arrCheckWinner[1];
         j=0;
+        
     }
     console.log(arrCheckWinner);
 }
@@ -100,7 +102,6 @@ resetBtn.addEventListener('click', resetFunction);
 
 function resetFunction() {
 
-    console.log('you')
     buttons.forEach((items) => {
         items.innerText = ''
     })
