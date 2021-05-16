@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/3657f037a5.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+    <script type="text/javascript" src="../project/s.js" defer></script>
     <style>
         * {
             margin: 0;
@@ -44,6 +45,7 @@
             outline: none;
             border: none;
             padding: 1em;
+            cursor: pointer;
         }
 
         .ranking__item {
@@ -54,6 +56,7 @@
             top: 60;
             /* display: flex;
             flex-direction: column; */
+            cursor: pointer;
         }
 
         .ranking__link {
@@ -109,6 +112,7 @@
             outline: none;
             font-size: 1em;
             vertical-align: top;
+            cursor: pointer;
         }
 
         .player--active {
@@ -166,6 +170,12 @@
                 </button>
             </div>
 
+            <div>
+                <button class="btn-feactuer Gamesize-btn">
+                   Gamesize
+                </button>
+            </div>
+
             <div class="ranking">
                 <div class="ranking__content">
                     <button class="btn-feactuer ranking__btn">start</button>
@@ -192,7 +202,7 @@
         </div>
         <div class="parent">
             <div class="line line--one">
-                <span class="container"><button class="btn line--one__btn  btn_Multiplication" id="0"></button></span>
+                <button class="btn line--one__btn" id="0"></button>
                 <button class="btn line--one__btn" id="1"></button>
                 <button class="btn line--one__btn" id="2"></button>
             </div>
@@ -210,6 +220,6 @@
     </div>
 
 </body>
-<script src="../project/s.js"></script>
+
 
 </html>
